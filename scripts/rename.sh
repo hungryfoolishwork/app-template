@@ -11,6 +11,7 @@ set -euo pipefail
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 name="${1:-}"
 bundle="${2:-}"
+lower="$(printf '%s' "$name" | tr '[:upper:]' '[:lower:]')"
 
 if [[ -z "$name" ]]; then
   echo "usage: scripts/rename.sh NewName [bundle.identifier]" >&2
@@ -41,6 +42,10 @@ while IFS= read -r file; do
   if [[ -n "$bundle" ]]; then
     sed -i '' "s/work\.hungryfoolish\.Project/$bundle/g" "$file"
   fi
+  # The custom URL scheme in the Info.plists is lowercase, so the word-start
+  # replacement below misses it. Match the exact plist token to avoid touching
+  # lowercase "project" prose elsewhere.
+  sed -i '' "s|<string>project</string>|<string>$lower</string>|g" "$file"
   sed -E -i '' "s/(^|[^A-Za-z])Project/\\1$name/g" "$file"
   echo "  rewrote ${file#"$root"/}"
 done
