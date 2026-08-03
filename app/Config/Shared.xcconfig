@@ -1,0 +1,22 @@
+// Project-identity and policy settings shared by all app targets.
+// Everything you'd edit when starting a project or cutting a release lives here.
+
+// Identity
+PRODUCT_NAME = Project
+PRODUCT_BUNDLE_IDENTIFIER = work.hungryfoolish.Project
+DEVELOPMENT_TEAM = 294VZ3T33E
+INFOPLIST_KEY_CFBundleDisplayName = Project
+INFOPLIST_KEY_LSApplicationCategoryType = public.app-category.utilities
+
+// Versioning
+MARKETING_VERSION = 1.0
+CURRENT_PROJECT_VERSION = 1
+
+// Platforms
+MACOSX_DEPLOYMENT_TARGET = 26.0
+IPHONEOS_DEPLOYMENT_TARGET = 26.0
+
+// Swift
+SWIFT_VERSION = 6.0
+SWIFT_APPROACHABLE_CONCURRENCY = YES
+SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor
