@@ -1,8 +1,11 @@
 import Foundation
 import ProjectCore
 
+@MainActor
 @Observable
 public final class AppState {
+
+    public var router = Router()
 
     public init() {}
 }
