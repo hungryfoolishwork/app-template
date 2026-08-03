@@ -1,10 +1,10 @@
-# Template
+# App Template
 
 A starting point for new macOS and iOS apps. The app targets are thin shells — each is a single `App.swift` plus resources — and all real code lives in two local Swift packages: `ProjectKit` for UI and `ProjectCore` for pure logic.
 
 ## After cloning
 
-    gh repo create hungryfoolishwork/someapp --template hungryfoolishwork/template --private --clone
+    gh repo create hungryfoolishwork/someapp --template hungryfoolishwork/app-template --private --clone
     cd someapp
     make rename NAME=SomeApp
 
