@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "FCD97D15-CA07-4810-8063-31A9200776DE",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testInteropMode" : "complete",
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ProjectKit",
+        "identifier" : "ProjectKitTests",
+        "name" : "ProjectKitTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:ProjectCore",
+        "identifier" : "ProjectCoreTests",
+        "name" : "ProjectCoreTests"
+      }
+    }
+  ],
+  "version" : 1
+}

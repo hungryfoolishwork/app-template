@@ -1,0 +1,14 @@
+.DS_Store
+
+# Project
+data/
+secrets/
+*.env*
+.claude
+
+# Swift
+.build/
+.swiftpm/
+xcuserdata/
+DerivedData/
+
