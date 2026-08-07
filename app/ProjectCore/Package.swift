@@ -9,18 +9,25 @@ let package = Package(
         .iOS(.v26),
     ],
     products: [
-        .library(
-            name: "ProjectCore",
-            targets: ["ProjectCore"]
-        ),
+        .library(name: "ProjectCore", targets: ["ProjectCore"]),
+        .library(name: "ProjectProtocol", targets: ["ProjectProtocol"]),
     ],
+    dependencies: [],
     targets: [
         .target(
-            name: "ProjectCore",
+            name: "ProjectProtocol",
         ),
+        .target(
+            name: "ProjectCore",
+            dependencies: [
+                "ProjectProtocol",
+            ]
+        )
         .testTarget(
             name: "ProjectCoreTests",
-            dependencies: ["ProjectCore"]
+            dependencies: [
+                "ProjectCore"
+            ]
         ),
     ]
 )

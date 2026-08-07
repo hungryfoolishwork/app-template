@@ -9,10 +9,7 @@ let package = Package(
         .iOS(.v26),
     ],
     products: [
-        .library(
-            name: "ProjectKit",
-            targets: ["ProjectKit"]
-        ),
+        .library(name: "ProjectKit", targets: ["ProjectKit"]),
     ],
     dependencies: [
         .package(path: "../ProjectCore"),
@@ -21,7 +18,7 @@ let package = Package(
         .target(
             name: "ProjectKit",
             dependencies: [
-                .product(name: "ProjectCore", package: "ProjectCore"),
+                .product(name: "ProjectProtocol", package: "ProjectCore"),
             ],
             resources: [
                 .process("Assets.xcassets"),
