@@ -11,9 +11,11 @@
 			<string>work.hungryfoolish.Project</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>project</string>
+				<string>$(PRODUCT_URL_SCHEME)</string>
 			</array>
 		</dict>
 	</array>
+	<key>ProductURLScheme</key>
+	<string>$(PRODUCT_URL_SCHEME)</string>
 </dict>
 </plist>

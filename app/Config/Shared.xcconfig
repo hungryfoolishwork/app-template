@@ -4,6 +4,7 @@
 // Identity
 PRODUCT_NAME = Project
 PRODUCT_BUNDLE_IDENTIFIER = work.hungryfoolish.Project
+PRODUCT_URL_SCHEME = project
 DEVELOPMENT_TEAM = 294VZ3T33E
 INFOPLIST_KEY_CFBundleDisplayName = Project
 INFOPLIST_KEY_LSApplicationCategoryType = public.app-category.utilities
