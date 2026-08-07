@@ -1,9 +1,7 @@
 import Foundation
 import Testing
-import ProjectCore
 
 @testable import ProjectKit
-
 
 @Suite struct KitTests {
 

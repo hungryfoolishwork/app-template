@@ -1,8 +1,8 @@
 import Foundation
 import Testing
 
+@testable import ProjectProtocol
 @testable import ProjectCore
-
 
 @Suite struct CoreTests {
 

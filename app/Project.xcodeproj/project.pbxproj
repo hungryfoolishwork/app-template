@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8EDE1C930210A23003ACE32 /* ProjectKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8EDE1C830210A23003ACE32 /* ProjectKit */; };
-		D8EDE1CB30210A29003ACE32 /* ProjectKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8EDE1CA30210A29003ACE32 /* ProjectKit */; };
+		D81304E230256E29005EF47A /* ProjectKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81304E130256E29005EF47A /* ProjectKit */; };
+		D81304E430256E2E005EF47A /* ProjectKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81304E330256E2E005EF47A /* ProjectKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,18 +63,25 @@
 		D8B446883021037D00654A6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				D8EDE1CB30210A29003ACE32 /* ProjectKit in Frameworks */,
+				D81304E230256E29005EF47A /* ProjectKit in Frameworks */,
 			);
 		};
 		D8EDE1B8302109A5003ACE32 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				D8EDE1C930210A23003ACE32 /* ProjectKit in Frameworks */,
+				D81304E430256E2E005EF47A /* ProjectKit in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D81304E030256E29005EF47A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8B446823021037D00654A6A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +90,7 @@
 				D85590E530211401001CBEF7 /* Config */,
 				D8B446A5302103DF00654A6A /* ProjectKit */,
 				D8B446AC302104DD00654A6A /* ProjectCore */,
+				D81304E030256E29005EF47A /* Frameworks */,
 				D8B4468C3021037D00654A6A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,7 +122,7 @@
 			);
 			name = Project;
 			packageProductDependencies = (
-				D8EDE1CA30210A29003ACE32 /* ProjectKit */,
+				D81304E130256E29005EF47A /* ProjectKit */,
 			);
 			productName = Project;
 			productReference = D8B4468B3021037D00654A6A /* Project.app */;
@@ -135,7 +143,7 @@
 			);
 			name = "Project-iOS";
 			packageProductDependencies = (
-				D8EDE1C830210A23003ACE32 /* ProjectKit */,
+				D81304E330256E2E005EF47A /* ProjectKit */,
 			);
 			productName = "Project-iOS";
 			productReference = D8EDE1BB302109A5003ACE32 /* Project.app */;
@@ -499,11 +507,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D8EDE1C830210A23003ACE32 /* ProjectKit */ = {
+		D81304E130256E29005EF47A /* ProjectKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProjectKit;
 		};
-		D8EDE1CA30210A29003ACE32 /* ProjectKit */ = {
+		D81304E330256E2E005EF47A /* ProjectKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProjectKit;
 		};

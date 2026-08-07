@@ -22,11 +22,11 @@ let package = Package(
             dependencies: [
                 "ProjectProtocol",
             ]
-        )
+        ),
         .testTarget(
             name: "ProjectCoreTests",
             dependencies: [
-                "ProjectCore"
+                "ProjectCore",
             ]
         ),
     ]

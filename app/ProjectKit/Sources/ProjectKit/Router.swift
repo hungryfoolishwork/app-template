@@ -1,5 +1,5 @@
 import SwiftUI
-import ProjectCore
+import ProjectProtocol
 
 public enum Route: Identifiable, Hashable, Codable {
     case settings

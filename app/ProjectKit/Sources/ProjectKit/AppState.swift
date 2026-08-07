@@ -1,5 +1,5 @@
 import Foundation
-import ProjectCore
+import ProjectProtocol
 
 @MainActor
 @Observable
