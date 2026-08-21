@@ -45,7 +45,7 @@ while IFS= read -r file; do
   # The custom URL scheme lives in Shared.xcconfig as a lowercase value, so the
   # word-start replacement below misses it. Match the exact assignment to avoid
   # touching lowercase "project" prose elsewhere.
-  sed -i '' "s/^PRODUCT_URL_SCHEME = project$/PRODUCT_URL_SCHEME = $lower/" "$file"
+  sed -i '' "s/^APP_URL_SCHEME = project$/APP_URL_SCHEME = $lower/" "$file"
   sed -E -i '' "s/(^|[^A-Za-z])Project/\\1$name/g" "$file"
   echo "  rewrote ${file#"$root"/}"
 done

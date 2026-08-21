@@ -11,12 +11,12 @@ public enum Route: Identifiable, Hashable, Codable {
     }
 
     public var id: String { path }
-    
+
     public var url: URL {
         URL(string: "\(Route.scheme)://\(path)")!
     }
 
-    public static let scheme = Bundle.main.object(forInfoDictionaryKey: "ProductURLScheme") as! String
+    public static let scheme = Bundle.main.object(forInfoDictionaryKey: "AppURLScheme") as! String
 }
 
 @MainActor
@@ -78,7 +78,7 @@ public final class Router {
             self?.persist()
         }
     }
-    
+
     private static let snapshotKey = "router.snapshot"
     private let saveDebouncer = Debouncer(delay: .milliseconds(500))
 
