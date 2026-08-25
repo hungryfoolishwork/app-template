@@ -19,6 +19,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D8C2EE81303DFF5C006841F0 /* Exceptions for "Config" folder in "Project-iOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppIcon.icon,
+			);
+			target = D8EDE1BA302109A5003ACE32 /* Project-iOS */;
+		};
+		D8C2EE83303DFF6A006841F0 /* Exceptions for "Config" folder in "Project" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppIcon.icon,
+			);
+			target = D8B4468A3021037D00654A6A /* Project */;
+		};
 		D8EDE1FA30210D34003ACE32 /* Exceptions for "Project" folder in "Project" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -38,6 +52,10 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D85590E530211401001CBEF7 /* Config */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D8C2EE83303DFF6A006841F0 /* Exceptions for "Config" folder in "Project" target */,
+				D8C2EE81303DFF5C006841F0 /* Exceptions for "Config" folder in "Project-iOS" target */,
+			);
 			path = Config;
 			sourceTree = "<group>";
 		};
