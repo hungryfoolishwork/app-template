@@ -47,7 +47,25 @@ upload-ios:
 	xcodebuild -exportArchive -archivePath $(ARCHIVES)/$(TARGET_IOS).xcarchive -exportOptionsPlist $(EXPORT_OPTIONS) \
 		-exportPath $(ARCHIVES)/upload/iOS -allowProvisioningUpdates
 
-# REMOVE!
+# Build, install, and launch on a paired device over USB or Wi-Fi. Picks the first physical iPhone
+# devicectl knows; pass DEVICE=<udid> to choose another, CONFIG=Debug for a debug build. Installing
+# over a TestFlight build replaces it. DEVICE looks itself up once, on first use.
+IOS_BUILD := .build/ios
+CONFIG ?= Release
+BUNDLE_ID := $(shell sed -n 's/^APP_BUNDLE_IDENTIFIER = //p' app/Config/Shared.xcconfig)
+DEVICE ?= $(eval DEVICE := $(shell xcrun devicectl list devices --quiet --json-output /dev/stdout 2>/dev/null | \
+	jq -r '[.result.devices[] | select(.hardwareProperties.reality == "physical" and .hardwareProperties.deviceType == "iPhone")][0].hardwareProperties.udid // empty'))$(DEVICE)
+
+.PHONY: install-ios
+
+install-ios:
+	@test -n "$(DEVICE)" || { echo "No paired iPhone found; pass DEVICE=<udid>." >&2; exit 1; }
+	xcodebuild -project $(XCODEPROJ) -scheme $(TARGET_IOS) -configuration $(CONFIG) -destination 'id=$(DEVICE)' \
+		-derivedDataPath $(IOS_BUILD) -allowProvisioningUpdates build
+	xcrun devicectl device install app --device $(DEVICE) $(IOS_BUILD)/Build/Products/$(CONFIG)-iphoneos/$(TARGET).app
+	xcrun devicectl device process launch --device $(DEVICE) $(BUNDLE_ID)
+
+# REMOVE!!!
 # After renaming the project template remove this command
 rename:
 ifndef NAME
